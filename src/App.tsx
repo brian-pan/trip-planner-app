@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import "./App.css";
+import "./styles.scss";
 import { StopModel } from "./models";
 
 import Header from "./components/Header";
@@ -32,6 +32,28 @@ const App = () => {
     }
   };
 
+  const onEdit = (e: React.FormEvent, id: number) => {};
+
+  const onDelete = (e: React.FormEvent, id: number) => {
+    setStops(stops.filter((stop) => stop.id !== id));
+  };
+
+  const onToggleIsOptional = (e: React.FormEvent, id: number) => {
+    setStops(
+      stops.map((stop) =>
+        stop.id === id ? { ...stop, isOptional: !stop.isOptional } : stop
+      )
+    );
+  };
+
+  const onToggleIsFavorite = (e: React.FormEvent, id: number) => {
+    setStops(
+      stops.map((stop) =>
+        stop.id === id ? { ...stop, isFavorite: !stop.isFavorite } : stop
+      )
+    );
+  };
+
   console.log("====================================");
   console.log(stops);
   console.log("====================================");
@@ -42,7 +64,18 @@ const App = () => {
         <div className="App">
           <Header />
           <Routes>
-            <Route path="/" element={<Home stops={stops} />} />
+            <Route
+              path="/"
+              element={
+                <Home
+                  stops={stops}
+                  onEdit={onEdit}
+                  onDelete={onDelete}
+                  onToggleIsOptional={onToggleIsOptional}
+                  onToggleIsFavorite={onToggleIsFavorite}
+                />
+              }
+            />
             <Route
               path="/new"
               element={

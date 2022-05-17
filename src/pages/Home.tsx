@@ -5,15 +5,37 @@ import TripList from "../components/TripList";
 
 interface Props {
   stops: StopModel[];
+  onEdit: (e: React.FormEvent, id: number) => void;
+  onDelete: (e: React.FormEvent, id: number) => void;
+  onToggleIsOptional: (e: React.FormEvent, id: number) => void;
+  onToggleIsFavorite: (e: React.FormEvent, id: number) => void;
 }
 
-const Home = ({ stops }: Props) => {
+const Home = ({
+  stops,
+  onEdit,
+  onDelete,
+  onToggleIsOptional,
+  onToggleIsFavorite,
+}: Props) => {
   return (
     <div>
       <Link className="btn btn-add" to="/new">
         ADD STOP
       </Link>
-      <TripList stops={stops} />
+      <TripList
+        stops={stops}
+        onEdit={onEdit}
+        onDelete={onDelete}
+        onToggleIsOptional={onToggleIsOptional}
+        onToggleIsFavorite={onToggleIsFavorite}
+      />
+      <div>
+        <h4>
+          You have x stops in this trip, and your Estimate Time Spending is: xx
+          mins
+        </h4>
+      </div>
     </div>
   );
 };
