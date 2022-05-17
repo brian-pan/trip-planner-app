@@ -1,4 +1,5 @@
 import React from "react";
+import { Navigate, Link } from "react-router-dom";
 import { StopModel } from "../models";
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
   setStop: React.Dispatch<React.SetStateAction<StopModel>>;
 }
 
-const AddPlace = ({ onSubmit, stop, setStop }: Props) => {
+const AddStop = ({ onSubmit, stop, setStop }: Props) => {
   const { location, name, length, isOptional, isFavorite } = stop;
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -81,9 +82,15 @@ const AddPlace = ({ onSubmit, stop, setStop }: Props) => {
             onChange={onChange}
           />
         </div>
+        <div className="form-group">
+          <button type="submit" className="btn">
+            ADD
+          </button>
+        </div>
+        <Link to="/">Back</Link>
       </form>
     </div>
   );
 };
 
-export default AddPlace;
+export default AddStop;

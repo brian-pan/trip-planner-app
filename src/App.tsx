@@ -13,7 +13,28 @@ const App = () => {
   const [stop, setStop] = useState<StopModel>({} as StopModel);
   const [stops, setStops] = useState<StopModel[]>([]);
 
-  const onAddStop = () => {};
+  const onAddStop = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (stop) {
+      setStops([
+        ...stops,
+        {
+          id: Date.now(),
+          location: stop.location,
+          name: stop.name,
+          length: stop.length,
+          isFavorite: stop.isFavorite,
+          isOptional: stop.isOptional,
+        },
+      ]);
+      setStop({} as StopModel);
+    }
+  };
+
+  console.log("====================================");
+  console.log(stops);
+  console.log("====================================");
 
   return (
     <>
