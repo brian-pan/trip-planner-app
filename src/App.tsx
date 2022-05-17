@@ -13,9 +13,9 @@ const App = () => {
   const [stop, setStop] = useState<StopModel>({} as StopModel);
   const [stops, setStops] = useState<StopModel[]>([]);
 
+  //add a stop
   const onAddStop = (e: React.FormEvent) => {
     e.preventDefault();
-
     if (stop) {
       setStops([
         ...stops,
@@ -30,6 +30,12 @@ const App = () => {
       ]);
       setStop({} as StopModel);
     }
+  };
+
+  //update a stop
+  const onEditSubmit = (e: React.FormEvent, id: number) => {
+    e.preventDefault();
+    setStops(stops.map((stop) => (stop.id === id ? { ...stop } : stop)));
   };
 
   const onEdit = (e: React.FormEvent, id: number) => {};
@@ -69,6 +75,7 @@ const App = () => {
               element={
                 <Home
                   stops={stops}
+                  onSubmit={onEditSubmit}
                   onEdit={onEdit}
                   onDelete={onDelete}
                   onToggleIsOptional={onToggleIsOptional}
