@@ -10,7 +10,7 @@ const TripList = ({ stops }: Props) => {
   return (
     <div className="stops-list">
       {stops.map((stop) => (
-        <Stop stop={stop} key={stop.id} />
+        <Stop stop={stop} key={stop.id} stops={stops} />
       ))}
     </div>
   );

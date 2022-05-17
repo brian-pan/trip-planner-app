@@ -6,12 +6,14 @@ import { StopModel } from "./models";
 
 import Header from "./components/Header";
 
-import AddPlace from "./pages/AddPlace";
+import AddStop from "./pages/AddStop";
 import Home from "./pages/Home";
 
 const App = () => {
-  const [stop, setStop] = useState<StopModel>();
+  const [stop, setStop] = useState<StopModel>({} as StopModel);
   const [stops, setStops] = useState<StopModel[]>([]);
+
+  const onAddStop = () => {};
 
   return (
     <>
@@ -20,7 +22,12 @@ const App = () => {
           <Header />
           <Routes>
             <Route path="/" element={<Home stops={stops} />} />
-            <Route path="/new" element={<AddPlace />} />
+            <Route
+              path="/new"
+              element={
+                <AddStop onSubmit={onAddStop} stop={stop} setStop={setStop} />
+              }
+            />
           </Routes>
         </div>
       </Router>

@@ -3,9 +3,10 @@ import { StopModel } from "../models";
 
 interface Props {
   stop: StopModel;
+  stops: StopModel[];
 }
 
-const Stop = ({ stop }: Props) => {
+const Stop = ({ stop, stops }: Props) => {
   return <form></form>;
 };
 
