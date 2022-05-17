@@ -83,7 +83,7 @@ const Stop = ({
       <form className="stop" onSubmit={(e) => onSubmit(e, stop.id)}>
         {isEditing ? (
           <>
-            <div>
+            <div className="stop-editing">
               <div className="form-group">
                 <label htmlFor="location">Location</label>
                 <input
@@ -124,7 +124,7 @@ const Stop = ({
             </button>
           </>
         ) : (
-          <>
+          <div className="stop-card">
             <div className="stop-content">
               <div className="stop-content-location">
                 <h3>
@@ -167,7 +167,7 @@ const Stop = ({
                 {stop.isFavorite ? <AiFillHeart /> : <AiOutlineHeart />}
               </span>
             </div>
-          </>
+          </div>
         )}
       </form>
     </>

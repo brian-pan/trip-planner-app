@@ -54,3 +54,24 @@ button {
     color: $color-text;
   }
 }
+
+.stop {
+  border: 2px solid $color-secondary;
+  border-radius: 0.5rem;
+  width: 90%;
+  margin: 10px auto;
+  padding: 20px;
+  .stop-card {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .stop-icons {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+}
