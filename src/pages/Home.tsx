@@ -6,19 +6,21 @@ import TripList from "../components/TripList";
 interface Props {
   stops: StopModel[];
   onEdit: (e: React.FormEvent, id: number) => void;
-  onSubmit: (e: React.FormEvent, id: number) => void;
+  // onSubmit: (e: React.FormEvent, id: number) => void;
   onDelete: (e: React.FormEvent, id: number) => void;
   onToggleIsOptional: (e: React.FormEvent, id: number) => void;
   onToggleIsFavorite: (e: React.FormEvent, id: number) => void;
+  setStops: React.Dispatch<React.SetStateAction<StopModel[]>>;
 }
 
 const Home = ({
   stops,
-  onSubmit,
+  // onSubmit,
   onEdit,
   onDelete,
   onToggleIsOptional,
   onToggleIsFavorite,
+  setStops,
 }: Props) => {
   return (
     <div>
@@ -27,11 +29,12 @@ const Home = ({
       </Link>
       <TripList
         stops={stops}
-        onSubmit={onSubmit}
+        // onSubmit={onSubmit}
         onEdit={onEdit}
         onDelete={onDelete}
         onToggleIsOptional={onToggleIsOptional}
         onToggleIsFavorite={onToggleIsFavorite}
+        setStops={setStops}
       />
       <div>
         <h4>

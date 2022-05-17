@@ -32,12 +32,6 @@ const App = () => {
     }
   };
 
-  //update a stop
-  const onEditSubmit = (e: React.FormEvent, id: number) => {
-    e.preventDefault();
-    setStops(stops.map((stop) => (stop.id === id ? { ...stop } : stop)));
-  };
-
   const onEdit = (e: React.FormEvent, id: number) => {};
 
   const onDelete = (e: React.FormEvent, id: number) => {
@@ -75,11 +69,12 @@ const App = () => {
               element={
                 <Home
                   stops={stops}
-                  onSubmit={onEditSubmit}
+                  // onSubmit={onEditSubmit}
                   onEdit={onEdit}
                   onDelete={onDelete}
                   onToggleIsOptional={onToggleIsOptional}
                   onToggleIsFavorite={onToggleIsFavorite}
+                  setStops={setStops}
                 />
               }
             />

@@ -6,3 +6,9 @@ export interface StopModel {
   isOptional: boolean;
   isFavorite: boolean;
 }
+
+export interface EditedStopModel {
+  location: string;
+  name: string;
+  length: number;
+}
