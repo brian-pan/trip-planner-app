@@ -10,7 +10,6 @@ interface Props {
 const Home = ({ stops }: Props) => {
   return (
     <div>
-      <h2>``Home Page``</h2>
       <Link className="btn btn-add" to="/new">
         ADD STOP
       </Link>
