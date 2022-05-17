@@ -36,12 +36,12 @@ const Home = ({
         onToggleIsFavorite={onToggleIsFavorite}
         setStops={setStops}
       />
-      <div>
+      {/* <div>
         <h4>
           You have x stops on this trip, and your Estimate Time Spending is: xx
           mins
         </h4>
-      </div>
+      </div> */}
     </div>
   );
 };

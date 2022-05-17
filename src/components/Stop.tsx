@@ -10,7 +10,13 @@ import {
   AiFillHeart,
   AiOutlineHeart,
 } from "react-icons/ai";
-import { MdOutlineVisibility, MdDoneOutline } from "react-icons/md";
+import {
+  MdOutlineVisibility,
+  MdDoneOutline,
+  MdOutlineAccessTime,
+} from "react-icons/md";
+import { GoLocation } from "react-icons/go";
+import { GrLocationPin } from "react-icons/gr";
 
 interface Props {
   stop: StopModel;
@@ -67,6 +73,11 @@ const Stop = ({
     setIsEditing(false);
   };
 
+  const inputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, [isEditing]);
+
   return (
     <>
       <form className="stop" onSubmit={(e) => onSubmit(e, stop.id)}>
@@ -82,6 +93,7 @@ const Stop = ({
                   name="location"
                   value={editedStop.location}
                   onChange={onChange}
+                  ref={inputRef}
                 />
               </div>
               <div className="form-group">
@@ -108,24 +120,25 @@ const Stop = ({
               </div>
             </div>
             <button className="stop-icons" type="submit">
-              <span className="stop-icon">
-                <MdDoneOutline />
-              </span>
+              <span className="stop-icon">SAVE</span>
             </button>
           </>
         ) : (
           <>
             <div className="stop-content">
               <div className="stop-content-location">
-                <h3>{stop.location}</h3>
+                <h3>
+                  <GoLocation /> {stop.location}
+                </h3>
               </div>
               <div className="stop-content-name">
-                <h3>{stop.name}</h3>
+                <h3>
+                  <GrLocationPin /> {stop.name}
+                </h3>
               </div>
               <div className="stop-content-length">
                 <h3>
-                  <span>ETS: </span>
-                  {stop.length} mins
+                  <MdOutlineAccessTime /> {stop.length} mins
                 </h3>
               </div>
             </div>

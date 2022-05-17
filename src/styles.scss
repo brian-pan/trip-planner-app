@@ -1,5 +1,56 @@
+$color-text: #fff;
+$color-text-opposite: #000;
+$color-primary: lightblue;
+$color-primary-darker: lightblue;
+$color-primary-darkest: lightblue;
+$color-primary-lighter: lightblue;
+$color-primary-lightest: lightblue;
+$color-secondary: pink;
+$color-secondary-darker: pink;
+$color-secondary-darkest: pink;
+$color-secondary-lighter: pink;
+$color-secondary-lightest: pink;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // background-color: $color-primary;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+  margin: 20px 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+button {
+  background-color: #fff;
+}
+
+.btn {
+  text-decoration: none;
+  color: $color-text-opposite;
+  border: 2px solid $color-primary;
+  border-radius: 0.5rem;
+  padding: 15px 0;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 720px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-primary-darkest;
+    color: $color-text;
+  }
 }
