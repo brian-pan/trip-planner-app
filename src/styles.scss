@@ -60,17 +60,32 @@ button {
   border-radius: 0.5rem;
   width: 90%;
   margin: 10px auto;
-  padding: 20px;
+  padding: 15px 20px;
+  max-width: 720px;
   .stop-card {
     // border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .stop-content {
+      div h3 {
+        display: flex;
+        align-items: center;
+        .inline-icon {
+          margin-right: 5px;
+        }
+      }
+    }
     .stop-icons {
       display: flex;
       flex-direction: column;
       span {
-        font-size: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 0.05s;
+        &:hover {
+          transform: scale(1.15);
+        }
       }
     }
   }

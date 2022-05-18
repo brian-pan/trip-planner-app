@@ -128,17 +128,18 @@ const Stop = ({
             <div className="stop-content">
               <div className="stop-content-location">
                 <h3>
-                  <GoLocation /> {stop.location}
+                  <GoLocation className="inline-icon" /> {stop.location}
                 </h3>
               </div>
               <div className="stop-content-name">
                 <h3>
-                  <GrLocationPin /> {stop.name}
+                  <GrLocationPin className="inline-icon" /> {stop.name}
                 </h3>
               </div>
               <div className="stop-content-length">
                 <h3>
-                  <MdOutlineAccessTime /> {stop.length} mins
+                  <MdOutlineAccessTime className="inline-icon" /> {stop.length}{" "}
+                  mins
                 </h3>
               </div>
             </div>
