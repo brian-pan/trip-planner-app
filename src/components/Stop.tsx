@@ -90,7 +90,7 @@ const Stop = ({
               <div className="form-group">
                 <label htmlFor="location">Location</label>
                 <input
-                  className="form-input"
+                  className="form-input focus-control"
                   type="input"
                   id="location"
                   placeholder="enter destination location"
@@ -103,7 +103,7 @@ const Stop = ({
               <div className="form-group">
                 <label htmlFor="name">Spot Name</label>
                 <input
-                  className="form-input"
+                  className="form-input focus-control"
                   type="input"
                   id="name"
                   placeholder="enter spot name"
@@ -115,7 +115,7 @@ const Stop = ({
               <div className="form-group">
                 <label htmlFor="length">Time Length (minutes)</label>
                 <input
-                  className="form-input"
+                  className="form-input focus-control"
                   type="input"
                   id="length"
                   placeholder="Time Length in Minute"
@@ -125,7 +125,10 @@ const Stop = ({
                 />
               </div>
             </div>
-            <button className="btn btn-sm stop-icons button-save" type="submit">
+            <button
+              className="btn btn-sm stop-icons button-save focus-control"
+              type="submit"
+            >
               <span className="stop-icon">SAVE</span>
             </button>
           </>

@@ -1,7 +1,7 @@
 $color-text: #fff;
 $color-text-opposite: #000;
 $color-text-disabled: #727271;
-$color-bg: rgba(255, 255, 255, 0.5);
+$color-bg: rgba(255, 255, 255, 0.697);
 $color-primary: #8bbeff;
 $color-primary-darker: #74aaff;
 $color-primary-darkest: #5c95ff;
@@ -35,6 +35,7 @@ h1 {
 
 h2 {
   text-align: center;
+  color: $color-text;
 }
 
 button {
@@ -82,6 +83,15 @@ button {
   margin: 20px auto;
 }
 
+.add-page {
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  width: 90%;
+  margin: 0 auto;
+  background-color: $color-bg;
+  padding: 15px 30px;
+}
+
 .form-group {
   // border: 1px solid red;
   display: flex;
@@ -99,6 +109,21 @@ button {
     // border-radius: 10px;
   }
 }
+
+.form-group-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  label {
+    margin-right: 5px;
+  }
+}
+
+// .focus-control:focus {
+//   box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.3);
+//   outline: none;
+// }
 
 .stop {
   border: 2px solid $color-secondary;
@@ -153,11 +178,11 @@ button {
   color: $color-text;
   .btn {
     color: $color-secondary-darkest;
-    background-color: $color-secondary-lightest;
+    background-color: $color-bg;
     border-color: $color-text;
     &:hover {
       color: $color-text;
-      background-color: $color-secondary-darker;
+      background-color: $color-secondary-darkest;
     }
   }
   .form-input {

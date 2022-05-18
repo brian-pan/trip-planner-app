@@ -24,7 +24,7 @@ const AddStop = ({ onSubmit, stop, setStop }: Props) => {
   return (
     <div>
       <form
-        className="form"
+        className="form add-page"
         onSubmit={(e) => {
           onSubmit(e);
         }}
@@ -32,6 +32,7 @@ const AddStop = ({ onSubmit, stop, setStop }: Props) => {
         <div className="form-group">
           <label htmlFor="location">Location</label>
           <input
+            className="form-input"
             type="input"
             id="location"
             placeholder="enter destination location"
@@ -43,6 +44,7 @@ const AddStop = ({ onSubmit, stop, setStop }: Props) => {
         <div className="form-group">
           <label htmlFor="name">Spot Name</label>
           <input
+            className="form-input"
             type="input"
             id="name"
             placeholder="enter spot name"
@@ -54,6 +56,7 @@ const AddStop = ({ onSubmit, stop, setStop }: Props) => {
         <div className="form-group">
           <label htmlFor="length">Time Length</label>
           <input
+            className="form-input"
             type="input"
             id="length"
             placeholder="Time Length in Minute"
@@ -62,7 +65,7 @@ const AddStop = ({ onSubmit, stop, setStop }: Props) => {
             onChange={onChange}
           />
         </div>
-        <div className="form-group">
+        <div className="form-group form-group-checkbox">
           <label htmlFor="isOptional">Optional Place</label>
           <input
             type="checkbox"
@@ -72,7 +75,7 @@ const AddStop = ({ onSubmit, stop, setStop }: Props) => {
             onChange={onChange}
           />
         </div>
-        <div className="form-group">
+        <div className="form-group form-group-checkbox">
           <label htmlFor="isFavorite">Favorite Place</label>
           <input
             type="checkbox"
@@ -83,11 +86,15 @@ const AddStop = ({ onSubmit, stop, setStop }: Props) => {
           />
         </div>
         <div className="form-group">
-          <button type="submit" className="btn">
+          <button type="submit" className="btn btn-add">
             ADD
           </button>
         </div>
-        <Link to="/">Back</Link>
+        <div className="form-group ">
+          <Link className="from-group-link" to="/">
+            Back
+          </Link>
+        </div>
       </form>
     </div>
   );
