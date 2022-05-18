@@ -70,11 +70,16 @@ button {
   // border: 1px solid red;
   display: flex;
   flex-direction: column;
+  label {
+    font-weight: 700;
+  }
   .form-input {
     // border: 1px solid green;
     margin-top: 1px;
     margin-bottom: 5px;
-    padding: 10px 0 10px 3px;
+    padding: 10px 0 10px 6px;
+    border: 1px solid $color-primary;
+    border-radius: 0.5rem;
     // border-radius: 10px;
   }
 }
@@ -84,13 +89,16 @@ button {
   border-radius: 0.5rem;
   width: 90%;
   margin: 10px auto;
-  padding: 15px 20px;
+  padding: 15px 30px;
   max-width: 720px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
   .stop-editing {
     // border: 1px solid red;
     display: flex;
     flex-direction: column;
+  }
+  .button-save {
+    margin-top: 5px;
   }
   .stop-card {
     // border: 1px solid red;
@@ -125,4 +133,25 @@ button {
 }
 .stop-isFavorite-true {
   background-color: $color-secondary-lightest;
+}
+
+@media (min-width: 600px) {
+  .btn-add {
+    width: 60%;
+  }
+  .stop {
+    width: 60%;
+    padding: 15px 40px;
+    .stop-card {
+      // justify-content: space-around;
+      .stop-icons {
+        display: flex;
+        flex-direction: row;
+        .stop-icon {
+          font-size: 28px;
+          margin-right: 2px;
+        }
+      }
+    }
+  }
 }

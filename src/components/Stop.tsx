@@ -113,7 +113,7 @@ const Stop = ({
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="length">Time Length</label>
+                <label htmlFor="length">Time Length (minutes)</label>
                 <input
                   className="form-input"
                   type="input"
@@ -125,7 +125,7 @@ const Stop = ({
                 />
               </div>
             </div>
-            <button className="btn btn-sm stop-icons" type="submit">
+            <button className="btn btn-sm stop-icons button-save" type="submit">
               <span className="stop-icon">SAVE</span>
             </button>
           </>
