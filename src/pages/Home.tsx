@@ -24,9 +24,6 @@ const Home = ({
 }: Props) => {
   return (
     <div>
-      <Link className="btn btn-add" to="/new">
-        ADD STOP
-      </Link>
       <TripList
         stops={stops}
         // onSubmit={onSubmit}
@@ -36,6 +33,9 @@ const Home = ({
         onToggleIsFavorite={onToggleIsFavorite}
         setStops={setStops}
       />
+      <Link className="btn btn-add" to="/new">
+        ADD STOP
+      </Link>
       {/* <div>
         <h4>
           You have x stops on this trip, and your Estimate Time Spending is: xx

@@ -1,16 +1,17 @@
 $color-text: #fff;
 $color-text-opposite: #000;
-$color-text-disabled: #bcb8b1;
-$color-primary: #a2d2f2;
-$color-primary-darker: lightblue;
-$color-primary-darkest: lightblue;
-$color-primary-lighter: #bde0fe;
-$color-primary-lightest: lightblue;
+$color-text-disabled: #727271;
+$color-bg: rgba(255, 255, 255, 0.5);
+$color-primary: #8bbeff;
+$color-primary-darker: #74aaff;
+$color-primary-darkest: #5c95ff;
+$color-primary-lighter: #a2d2ff;
+$color-primary-lightest: #bde0fe;
 $color-secondary: #ffb3c6;
 $color-secondary-darker: #ff8fab;
 $color-secondary-darkest: #fb6f92;
 $color-secondary-lighter: #ffc8dd;
-$color-secondary-lightest: #f9e0dc65;
+$color-secondary-lightest: #f9e0dc;
 
 * {
   margin: 0;
@@ -21,12 +22,15 @@ $color-secondary-lightest: #f9e0dc65;
 
 body {
   font-family: "Nunito Sans", sans-serif;
+  background-image: url("./assets/images/daniel-cartin-LgHNehAIcOs-unsplash.jpg");
+  background-size: auto;
 }
 
 h1 {
   font-family: "Permanent Marker", cursive;
   text-align: center;
   margin: 20px 0;
+  color: $color-text;
 }
 
 h2 {
@@ -51,19 +55,31 @@ button {
   justify-content: center;
   cursor: pointer;
   font-weight: 700;
+  box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.3);
+  transition: all 0.1s;
+  background-color: $color-bg;
+  border-color: $color-text;
   &:hover {
     background-color: $color-primary-darkest;
+
     color: $color-text;
+  }
+  &:active {
+    transform: scale(0.98);
   }
 }
 
 .btn-sm {
   width: 100%;
-  padding: 5px 10px;
+  padding: 10px 10px;
 }
 
 .btn-light {
   font-weight: 400;
+}
+
+.btn-add {
+  margin: 20px auto;
 }
 
 .form-group {
@@ -87,11 +103,12 @@ button {
 .stop {
   border: 2px solid $color-secondary;
   border-radius: 0.5rem;
+  background-color: $color-bg;
   width: 90%;
   margin: 10px auto;
   padding: 15px 30px;
   max-width: 720px;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.5);
   .stop-editing {
     // border: 1px solid red;
     display: flex;
@@ -132,7 +149,20 @@ button {
   }
 }
 .stop-isFavorite-true {
-  background-color: $color-secondary-lightest;
+  background-color: $color-secondary-darkest;
+  color: $color-text;
+  .btn {
+    color: $color-secondary-darkest;
+    background-color: $color-secondary-lightest;
+    border-color: $color-text;
+    &:hover {
+      color: $color-text;
+      background-color: $color-secondary-darker;
+    }
+  }
+  .form-input {
+    border: none;
+  }
 }
 
 @media (min-width: 600px) {
