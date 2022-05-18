@@ -16,7 +16,7 @@ import {
   MdOutlineAccessTime,
 } from "react-icons/md";
 import { GoLocation } from "react-icons/go";
-import { GrLocationPin } from "react-icons/gr";
+import { BsPinMap } from "react-icons/bs";
 
 interface Props {
   stop: StopModel;
@@ -80,13 +80,17 @@ const Stop = ({
 
   return (
     <>
-      <form className="stop" onSubmit={(e) => onSubmit(e, stop.id)}>
+      <form
+        className={`stop stop-isFavorite-${stop.isFavorite}`}
+        onSubmit={(e) => onSubmit(e, stop.id)}
+      >
         {isEditing ? (
           <>
             <div className="stop-editing">
               <div className="form-group">
                 <label htmlFor="location">Location</label>
                 <input
+                  className="form-input"
                   type="input"
                   id="location"
                   placeholder="enter destination location"
@@ -99,6 +103,7 @@ const Stop = ({
               <div className="form-group">
                 <label htmlFor="name">Spot Name</label>
                 <input
+                  className="form-input"
                   type="input"
                   id="name"
                   placeholder="enter spot name"
@@ -110,6 +115,7 @@ const Stop = ({
               <div className="form-group">
                 <label htmlFor="length">Time Length</label>
                 <input
+                  className="form-input"
                   type="input"
                   id="length"
                   placeholder="Time Length in Minute"
@@ -119,13 +125,15 @@ const Stop = ({
                 />
               </div>
             </div>
-            <button className="stop-icons" type="submit">
+            <button className="btn btn-sm stop-icons" type="submit">
               <span className="stop-icon">SAVE</span>
             </button>
           </>
         ) : (
-          <div className="stop-card">
-            <div className="stop-content">
+          <div className={`stop-card`}>
+            <div
+              className={`stop-content stop-content-isOptional-${stop.isOptional}`}
+            >
               <div className="stop-content-location">
                 <h3>
                   <GoLocation className="inline-icon" /> {stop.location}
@@ -133,7 +141,7 @@ const Stop = ({
               </div>
               <div className="stop-content-name">
                 <h3>
-                  <GrLocationPin className="inline-icon" /> {stop.name}
+                  <BsPinMap className="inline-icon" /> {stop.name}
                 </h3>
               </div>
               <div className="stop-content-length">
@@ -151,7 +159,7 @@ const Stop = ({
                 <AiFillDelete />
               </span>
               <span
-                className={`stop-icon stop-icon-isOptional-${stop.isOptional}`}
+                className={`stop-icon`}
                 //if isOptional = true, then color grey
                 onClick={(e) => onToggleIsOptional(e, stop.id)}
               >
