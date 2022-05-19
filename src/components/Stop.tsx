@@ -3,18 +3,12 @@ import { StopModel, EditedStopModel } from "../models";
 
 import {
   AiOutlineEdit,
-  AiFillEdit,
   AiFillDelete,
-  AiFillEyeInvisible,
   AiOutlineEyeInvisible,
   AiFillHeart,
   AiOutlineHeart,
 } from "react-icons/ai";
-import {
-  MdOutlineVisibility,
-  MdDoneOutline,
-  MdOutlineAccessTime,
-} from "react-icons/md";
+import { MdOutlineVisibility, MdOutlineAccessTime } from "react-icons/md";
 import { GoLocation } from "react-icons/go";
 import { BsPinMap } from "react-icons/bs";
 
