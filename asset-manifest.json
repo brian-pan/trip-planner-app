@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/trip-planner-app/static/css/main.e291943e.css",
+    "main.js": "/trip-planner-app/static/js/main.86d4a8ae.js",
+    "static/media/daniel-cartin-LgHNehAIcOs-unsplash.jpg": "/trip-planner-app/static/media/daniel-cartin-LgHNehAIcOs-unsplash.cdb81a602522081d947f.jpg",
+    "index.html": "/trip-planner-app/index.html",
+    "main.e291943e.css.map": "/trip-planner-app/static/css/main.e291943e.css.map",
+    "main.86d4a8ae.js.map": "/trip-planner-app/static/js/main.86d4a8ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e291943e.css",
+    "static/js/main.86d4a8ae.js"
+  ]
+}
