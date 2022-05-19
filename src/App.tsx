@@ -28,7 +28,13 @@ const App = () => {
           isOptional: stop.isOptional,
         },
       ]);
-      setStop({} as StopModel);
+      setStop({
+        location: "",
+        name: "",
+        length: 0,
+        isFavorite: false,
+        isOptional: false,
+      } as StopModel);
     }
   };
 

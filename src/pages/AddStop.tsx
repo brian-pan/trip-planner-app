@@ -1,5 +1,6 @@
 import React from "react";
 import { Navigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { StopModel } from "../models";
 
 interface Props {
@@ -9,6 +10,8 @@ interface Props {
 }
 
 const AddStop = ({ onSubmit, stop, setStop }: Props) => {
+  const navigate = useNavigate();
+
   const { location, name, length, isOptional, isFavorite } = stop;
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,15 +30,16 @@ const AddStop = ({ onSubmit, stop, setStop }: Props) => {
         className="form add-page"
         onSubmit={(e) => {
           onSubmit(e);
+          navigate("/");
         }}
       >
         <div className="form-group">
           <label htmlFor="location">Location</label>
           <input
             className="form-input"
-            type="input"
+            type="text"
             id="location"
-            placeholder="enter destination location"
+            placeholder="Enter destination location"
             name="location"
             value={location}
             onChange={onChange}
@@ -45,9 +49,9 @@ const AddStop = ({ onSubmit, stop, setStop }: Props) => {
           <label htmlFor="name">Spot Name</label>
           <input
             className="form-input"
-            type="input"
+            type="text"
             id="name"
-            placeholder="enter spot name"
+            placeholder="Enter spot name"
             name="name"
             value={name}
             onChange={onChange}
@@ -57,7 +61,7 @@ const AddStop = ({ onSubmit, stop, setStop }: Props) => {
           <label htmlFor="length">Time Length</label>
           <input
             className="form-input"
-            type="input"
+            type="number"
             id="length"
             placeholder="Time Length in Minute"
             name="length"

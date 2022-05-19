@@ -91,7 +91,7 @@ const Stop = ({
                 <label htmlFor="location">Location</label>
                 <input
                   className="form-input focus-control"
-                  type="input"
+                  type="text"
                   id="location"
                   placeholder="enter destination location"
                   name="location"
@@ -104,7 +104,7 @@ const Stop = ({
                 <label htmlFor="name">Spot Name</label>
                 <input
                   className="form-input focus-control"
-                  type="input"
+                  type="text"
                   id="name"
                   placeholder="enter spot name"
                   name="name"
@@ -116,7 +116,7 @@ const Stop = ({
                 <label htmlFor="length">Time Length (minutes)</label>
                 <input
                   className="form-input focus-control"
-                  type="input"
+                  type="number"
                   id="length"
                   placeholder="Time Length in Minute"
                   name="length"

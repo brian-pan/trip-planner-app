@@ -21,7 +21,7 @@ $color-secondary-lightest: #f9e0dc;
 }
 
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
   background-image: url("./assets/images/daniel-cartin-LgHNehAIcOs-unsplash.jpg");
   background-size: auto;
 }
@@ -126,7 +126,7 @@ button {
 // }
 
 .stop {
-  border: 2px solid $color-secondary;
+  border: 2px solid $color-text;
   border-radius: 0.5rem;
   background-color: $color-bg;
   width: 90%;
