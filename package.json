@@ -2,7 +2,7 @@
   "name": "trip-planner-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://brian-pan.github.io/trip-planner-app/",
+  "homepage": "https://brian-pan.github.io/trip-planner-app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
